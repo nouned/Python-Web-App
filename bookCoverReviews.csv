@@ -1,0 +1,6 @@
+book_name,book_author,cover_review,cover_score,isbn,book_cover,review_id
+Insomnia,Stephen King,Total Yawn,0,1501143727,https://covers.openlibrary.org/b/id/8418891-M.jpg,0101000
+Insomnia,Stephen King,Terrible.,1,1501143727,https://covers.openlibrary.org/b/id/8418891-M.jpg,86410919
+"Fly, You Stupid Kite, Fly",Charles M. Schulz,Adorable and delightful. Love the colour.,9,9780808506508,https://upload.wikimedia.org/wikipedia/commons/6/65/No-Image-Placeholder.svg,25177615682513419369
+Fahrenheit 451,Ray Bradbury,So hot!,10,9788481365863,https://covers.openlibrary.org/b/id/13459171-M.jpg,141250117601371070
+Le Monde Perdu,Arthur Conan Doyle,"Check out that typography, damn!",5,9782036001596,https://covers.openlibrary.org/b/id/11126978-M.jpg,1418504032013325160

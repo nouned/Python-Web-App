@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to bootstrap.css -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <title>{{ title }}</title>
+</head>
+  <body>
+    <div class="container">
+      <h1>Cover Judge</h1>
+      <p>Welcome to Cover Judge, where you can judge a book by its cover!</p>
+      <div class="container mt-4">
+        <h1 class="text-center">{{ title }}</h1>
+        <hr>
+        <div class="row">
+          {% for book in books %}
+            <div class="col-md-4 mb-3">
+              <div class="card">
+                {% if book.book_cover %}
+                  <img src="{{ book.book_cover }}" class="card-img-top" alt="{{ book.book_name }}">
+                {% endif %}
+                <div class="card-body">
+                  <h5 class="card-title">{{ book.book_name }}</h5>
+                  <p class="card-text">{{ book.book_author }}</p>
+                  <a href="/book/{{ book.review_id }}" class="btn btn-primary">View Book</a>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+      <h2>Post a Review</h2>
+      <p>Have you read a book with a great or terrible cover? Share your opinion!</p>
+      <a href="/post-review" class="btn btn-primary">Judge A Cover</a>
+    </div>
+  </body>
+</html>

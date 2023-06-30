@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to bootstrap.css -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"">
+    <title>{{ book_name }}</title>
+</head>
+<body>
+    {% block content %}
+    <div class="container">
+        <h1>Book: {{ book['book_name'] }}</h1>
+        <h2>Author: {{ book['book_author'] }}</h2>
+        <p>ISBN: {{ book['isbn'] }}</p>
+        <img src="{{ book['book_cover'] }}" alt="Book Cover">
+        <h3>Cover Score: {{ book['cover_score'] }}/10</h3>
+        <p><b>Review:</b></br>{{ book['cover_review'] }}</p>
+        <a href="/" class="btn btn-primary">Home</a>
+        <a href="/post-review" class="btn btn-primary">Judge A Cover</a>
+      </div>
+  
+{% endblock %}
+</body>
+</html>

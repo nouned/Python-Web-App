@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to bootstrap.css -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"">
+    <title>Post a review</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Post a review</h1>
+        <!-- Add a button for the user to return to the index with the label 'Home' -->
+        <div class="text-center my-3">
+            <a href="/" class="btn btn-lg btn-primary">Home</a>
+        </div>
+        <!-- Add a form for the user to complete the inputs -->
+        <form action="/post-review" method="POST" class="needs-validation" novalidate>
+            <!-- Add a form group for the book name input -->
+            <div class="form-group">
+                <label for="book_name">Book name:</label>
+                <input type="text" class="form-control" id="book_name" name="book_name" placeholder="Enter book name" required>
+                <!-- Add a validation feedback message -->
+                <div class="invalid-feedback">
+                    Please enter a book name.
+                </div>
+            </div>
+            <!-- Add a form group for the book author input -->
+            <div class="form-group">
+                <label for="book_author">Book author:</label>
+                <input type="text" class="form-control" id="book_author" name="book_author" placeholder="Enter book author" required>
+                <!-- Add a validation feedback message -->
+                <div class="invalid-feedback">
+                    Please enter a book author.
+                </div>
+            </div>
+            <!-- Add a form group for the cover review input -->
+            <div class="form-group">
+                <label for="cover_review">Cover review:</label>
+                <textarea class="form-control" id="cover_review" name="cover_review" rows="3" placeholder="Enter your review of the book cover" required></textarea>
+                <!-- Add a validation feedback message -->
+                <div class="invalid-feedback">
+                    Please enter a cover review.
+                </div>
+            </div>
+            <!-- Add a form group for the cover score input -->
+            <div class="form-group">
+                <label for="cover_score">Cover score:</label>
+                <input type="number" class="form-control" id="cover_score" name="cover_score" min="1" max="10" placeholder="Enter an integer between 1 and 10" required>
+                <!-- Add a validation feedback message -->
+                <div class="invalid-feedback">
+                    Please enter an integer between 1 and 10 (inclusive).
+                </div>
+            </div>
+            <!-- Add a submit button for the form -->
+            <button type="submit" class="btn btn-lg btn-success">Submit</button>
+        </form>
+    </div>
+
+    <!-- Link to jquery and bootstrap.js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Add some javascript code to enable form validation -->
+    <script>
+        // Get the form element
+        var form = document.querySelector('.needs-validation');
+        // Add an event listener for submit event
+        form.addEventListener('submit', function(event) {
+            // Check if the form is valid
+            if (form.checkValidity() === false) {
+                // Prevent default submission
+                event.preventDefault();
+                event.stopPropagation();
+            }
+            // Set the validated class on the form
+            form.classList.add('was-validated');
+        });
+    </script>
+
+</body>
+</html>
